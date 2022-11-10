@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+   <title>Project Camp Dicoding</title>
+       <script src="assets/storage.js"></script>
+   <script src="assets/kalkulator.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+   box-sizing: border-box;
+}
+body {
+   font-family: sans-serif;
+     background-image: url("images/background.jpg");
+}
+      header {
+        height: 160px;
+        background-image: url(images/headers.jpg);}
+      h1 {
+        text-indent: -9999px;
+        width: 940px;
+        height: 130px;
+        margin: 0px;}
+      nav, footer {
+        clear: both;
+        color: #ffffff;
+        background-color: #26C4C2;
+        height: 30px;}
+      nav ul {
+        margin: 0px;
+        padding: 5px 0px 5px 30px;}
+      nav li {
+        display: inline;
+        margin-right: 40px;}
+      nav li a {
+        color: #ffffff;}
+      nav li a:hover, nav li a.current {
+        color: #000000;}
+* {
+  box-sizing: border-box;
+}
+
+
+.flex-container-column {
+   display: flex;
+   /* properti pendukung */
+   flex-direction: column;
+   max-width: 800px;
+   margin: 0 auto;
+   text-align: right;
+}
+.flex-container-row {
+   display: flex;
+}
+.button {
+   flex-basis: 25%;
+   /* properti pendukung */
+   font-size: 1.5em;
+   text-align: center;
+   padding: 40px;
+   border: 1px solid black;
+   background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+   cursor: pointer;
+}
+.double {
+   flex-basis: 50%;
+}
+.display {
+   color: white;
+   width: 100%;
+   padding: 10px 20px;
+   background-color: #333333;
+   border: 1px solid black;
+   font-size: 2em;
+}
+.operator,
+.negative,
+.equals {
+   background: orange;
+}
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 30px;
+   margin-top: 20px;
+}
+.button:hover {
+   font-weight: bold;
+}
+.history {
+   width: 80%;
+   margin: 30px auto 0 auto;
+   overflow: scroll;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+   width: 100%;
+   border: 1px solid #ddd;
+}
+th,
+td {
+   text-align: center;
+   padding: 16px;
+}
+th {
+   background-color: orange;
+   color: white;
+}
+tr:nth-child(even) {
+   background-color: #d2d2d2;
+}
+@media screen and (max-width: 513px) {
+ .button {
+       padding: 10px;
+ }
+ .history {
+       width: 100%;
+ }
+}
+.wrapper {
+        width: 960px;
+        margin: 20px auto 20px auto;
+        border: 2px solid #26C4C2;
+        background-color: #ffffff;
+        }
+</style>
+</head>
+
+<body>
+  <div class="wrapper">
+  <header>
+        <h1>Project Camp Dicoding</h1>
+      <i>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="current">Beranda</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="Calculator.html">Calculator</a></li>
+          
+          </ul>
+        </nav>
+      </i>
+      </header>
+   <div class="flex-container-column card">
+       <div class="display">
+           <h1 id="displayNumber"></h1>
+       </div>
+       <div class="flex-container-row">
+           <div class="button">7</div>
+           <div class="button">8</div>
+           <div class="button">9</div>
+           <div class="button negative">+/-</div>
+       </div>
+       <div class="flex-container-row">
+           <div class="button">4</div>
+           <div class="button">5</div>
+           <div class="button">6</div>
+           <div class="button operator">-</div>
+       </div>
+       <div class="flex-container-row">
+           <div class="button">1</div>
+           <div class="button">2</div>
+           <div class="button">3</div>
+           <div class="button operator">+</div>
+       </div>
+       <div class="flex-container-row">
+           <div class="button clear">CE</div>
+           <div class="button">0</div>
+           <div class="button equals double">=</div>
+       </div>
+   </div>
+   <div class="history card">
+       <h2>Riwayat Perhitungan</h2>
+       <table>
+           <thead>
+               <tr>
+                   <th>Angka Pertama</th>
+                   <th>Operator</th>
+                   <th>Angka Kedua</th>
+                   <th>Hasil</th>
+               </tr>
+           </thead>
+           <tbody id="historyList"></tbody>
+       </table>
+   </div>
+ 
+   <script src="assets/kalkulator.js"></script>
+ </div>
+</body>
+ 
+</html>

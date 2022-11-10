@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("images/background.jpg");
+}
+      header {
+        height: 160px;
+        background-image: url(images/headers.jpg);}
+      h1 {
+        text-indent: -9999px;
+        width: 940px;
+        height: 130px;
+        margin: 0px;}
+      nav, footer {
+        clear: both;
+        color: #ffffff;
+        background-color: #26C4C2;
+        height: 30px;}
+      nav ul {
+        margin: 0px;
+        padding: 5px 0px 5px 30px;}
+      nav li {
+        display: inline;
+        margin-right: 40px;}
+      nav li a {
+        color: #ffffff;}
+      nav li a:hover, nav li a.current {
+        color: #000000;}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.wrapper {
+        width: 960px;
+        margin: 20px auto 20px auto;
+        border: 2px solid #26C4C2;
+        background-color: #ffffff;
+        }
+footer {
+        font-size: 80%;
+        padding: 7px 0px 0px 20px;}
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+        <h1>Project Camp Dicoding</h1>
+      <i>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="current">Beranda</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="Calculator.html">Calculator</a></li>
+          
+          </ul>
+        </nav>
+      </i>
+      </header>
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="images/contactus.png" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="Indonesia">Indonesia</option>
+          <option value="Thailand">Thailand</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+      <footer>
+        &copy; TaigaHealthy
+      </footer>
+</div>
+</body>
+</html>
